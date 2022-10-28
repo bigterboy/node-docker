@@ -19,7 +19,10 @@
     "run_docker_set_env": "docker run -v $(pwd):/app:ro -v /app/node_modules --env  PORT=4000 -p 3000:4000 -d --name node-app node-app-image",
     "run_docker_with_env_file": "docker run -v $(pwd):/app:ro -v /app/node_modules --env-file ./.env  -p 3000:4000 -d --name node-app node-app-image",
     "remove_all_unused_volume": "docker volume prune",
-    "remove_all_docker_with_volume": "docker rm node-app -fv"
+    "remove_all_docker_with_volume": "docker rm node-app -fv",
+    "run_by_docker_compose_up": "docker-compose up -d",
+    "run_by_docker_compose_up_and_rebuild_images": "docker-compose up -d --build",
+    "run_by_docker_compose_down_remove_volume": "docker-compose down -v"
   },
   "author": "",
   "license": "ISC"
