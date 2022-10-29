@@ -22,7 +22,10 @@
     "remove_all_docker_with_volume": "docker rm node-app -fv",
     "run_by_docker_compose_up": "docker-compose up -d",
     "run_by_docker_compose_up_and_rebuild_images": "docker-compose up -d --build",
-    "run_by_docker_compose_down_remove_volume": "docker-compose down -v"
+    "run_by_docker_compose_down_remove_volume": "docker-compose down -v",
+    "run_multiple_docker_compose_up_dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d",
+    "run_multiple_docker_compose_down_dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v",
+    "run_docker_compose_up_pro_rebuild_image": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build"
   },
   "author": "",
   "license": "ISC"
