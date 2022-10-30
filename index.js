@@ -1,11 +1,24 @@
-const express = require("express")
+const express = require("express");
+const mongoose = require("mongoose");
 
-const app = express()
+const { MONGO_USER, MONGO_PASSWORD, MONGO_IP, MONGO_PORT } = require("./config/config");
+
+const app = express();
+
+mongoose
+  //   .connect("mongodb://root:123123@172.25.0.2:27017/?authSource=admin")
+  .connect(
+    `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin`
+  )
+  .then(() => {
+    console.log("Succesfully connected to DB");
+  })
+  .catch((e) => console.log(e));
 
 app.get("/", (req, res) => {
-    res.send("<h2>HI THERE</h2>")
-})
+  res.send("<h2>HI THERE</h2>");
+});
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
 
-app.listen(port, () => console.log(`listening on port ${port}`))
+app.listen(port, () => console.log(`listening on port ${port}`));

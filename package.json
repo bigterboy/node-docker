@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "mongoose": "^6.7.0"
   },
   "devDependencies": {
     "nodemon": "2.0.20"
@@ -29,7 +30,9 @@
     "login_mongo": "docker exec -it docker2-mongo-1 mongosh -u \"root\" -p \"123123\"",
     "use_another_db": "use mydb",
     "show_all_dbs": "show dbs",
-    "delete_volume_unused": "docker volume prune"
+    "delete_volume_unused": "docker volume prune",
+    "get_ip_address_container": "docker inspect docker2-mongo-1",
+    "show_logs_of_container": "docker logs docker2-node-app-1 -f"
   },
   "author": "",
   "license": "ISC"
