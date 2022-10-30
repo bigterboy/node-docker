@@ -32,7 +32,8 @@
     "show_all_dbs": "show dbs",
     "delete_volume_unused": "docker volume prune",
     "get_ip_address_container": "docker inspect docker2-mongo-1",
-    "show_logs_of_container": "docker logs docker2-node-app-1 -f"
+    "show_logs_of_container": "docker logs docker2-node-app-1 -f",
+    "up_container_without_start_mongo": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --no-deps node-app"
   },
   "author": "",
   "license": "ISC"
