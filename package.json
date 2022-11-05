@@ -38,7 +38,8 @@
     "get_ip_address_container": "docker inspect docker2-mongo-1",
     "show_logs_of_container": "docker logs docker2-node-app-1 -f",
     "up_container_without_start_mongo": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --no-deps node-app",
-    "access_redis": "docker exec -it docker2-redis-1 redis-cli"
+    "access_redis": "docker exec -it docker2-redis-1 redis-cli",
+    "scale_container": "docker2 % docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --scale node-app=2"
   },
   "author": "",
   "license": "ISC"

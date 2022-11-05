@@ -12,7 +12,7 @@ router
 
 router
   .route("/:id")
-  .get(pprotect, ostControl.getOnePost)
+  .get(protect, postControl.getOnePost)
   .patch(protect, postControl.updatePost)
   .delete(protect, postControl.deletePost);
 

@@ -39,6 +39,8 @@ const connectWithRetry = () => {
 
 connectWithRetry();
 
+app.enable("trust proxy");
+
 app.use(
   session({
     store: new RedisStore({ client: redisClient }),
@@ -55,7 +57,8 @@ app.use(
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
+app.get("/api/v1", (req, res) => {
+  console.log("YEAH IT RAN");
   res.send("<h2>HI THERE</h2>");
 });
 
