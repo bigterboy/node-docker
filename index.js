@@ -26,6 +26,7 @@ const app = express();
 const mongoUrl = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin`;
 
 const connectWithRetry = () => {
+  console.log("CONNECT TO DATABASE: " , mongoUrl)
   mongoose
     //   .connect("mongodb://root:123123@172.25.0.2:27017/?authSource=admin")
     .connect(mongoUrl)
