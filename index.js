@@ -63,7 +63,7 @@ app.use(express.json());
 
 app.get("/api/v1", (req, res) => {
   console.log("YEAH IT RAN");
-  res.send("<h2>HI THERE</h2>");
+  res.send("<h2>HI THIS IS VERSION 1.0.1</h2>");
 });
 
 app.use("/api/v1/posts", postRoute);
