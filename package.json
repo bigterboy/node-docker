@@ -40,7 +40,8 @@
     "show_logs_of_container": "docker logs docker2-node-app-1 -f",
     "up_container_without_start_mongo": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --no-deps node-app",
     "access_redis": "docker exec -it docker2-redis-1 redis-cli",
-    "scale_container": "docker2 % docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --scale node-app=2"
+    "scale_container": "docker2 % docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --scale node-app=2",
+    "update_code_production_change_only_file": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build --no-deps node-app"
   },
   "author": "",
   "license": "ISC"
