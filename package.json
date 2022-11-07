@@ -50,7 +50,8 @@
     "push_image_after_build": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml push node-app",
     "pull_image_after_build": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml pull node-app",
     "up_node_app_production": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up --no-deps node-app",
-    "watchtower": "docker run -d --name watchtower -e -WATCHTOWER_TRACE=true -e WATCHTOWER_DEUBG=true -e WATCHTOWER_POLL_INTERVAL=50 -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower app_node-app_1"
+    "watchtower": "docker run -d --name watchtower -e -WATCHTOWER_TRACE=true -e WATCHTOWER_DEUBG=true -e WATCHTOWER_POLL_INTERVAL=50 -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower app_node-app_1",
+    "deploy_swarm": "docker stack deploy -c docker-compose.yml -c docker-compose.prod.yml myapp"
   },
   "author": "",
   "license": "ISC"
